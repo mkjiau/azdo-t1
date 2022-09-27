@@ -15,8 +15,8 @@ runs:
     shell: bash
     run: |
       echo code scanning 
-      echo "${{ github.event.inputs.aa }}"
-      echo "${{ github.event.inputs.bb }}"
-#     with:
-#       aaa: ${{ inputs.aa }}
-#       bbb: ${{ inputs.bb}}
+      echo "${{ github.event.inputs.aaa }}"
+      echo "${{ github.event.inputs.bbb }}"
+    with:
+      aaa: ${{ inputs.aa }}
+      bbb: ${{ inputs.bb}}
