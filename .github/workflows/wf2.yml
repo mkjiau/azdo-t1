@@ -13,7 +13,7 @@ jobs:
         persist-credentials: false
     - name: Deploy
       # Just need to pass the path from action
-      uses: "./.github/template/code-scan" 
+      uses: "./.github/actions/code-scan" 
       # Defining the variables required in our action
       with:
         aa: "123"
