@@ -14,6 +14,16 @@ jobs:
     - name: Install and Build 1
       run: |
         echo hello prj1! build-job~
+  build-cli-job:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v2 # If you're using actions/checkout@v2 you must set persist-credentials to false in most cases for the deployment to work correctly.
+      with:
+        persist-credentials: false
+    - name: Install and Build 3
+      run: |
+        echo hello prj1! build-cli-job~
   deploy-job:
     runs-on: ubuntu-latest
     needs: [build-job]
