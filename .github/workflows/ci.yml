@@ -4,13 +4,19 @@ on:
     branches:
       - main
 jobs:
-  build-and-deploy:
+  build-job:
     runs-on: ubuntu-latest
     steps:
     - name: Checkout
       uses: actions/checkout@v2 # If you're using actions/checkout@v2 you must set persist-credentials to false in most cases for the deployment to work correctly.
       with:
         persist-credentials: false
-    - name: Install and Build
+    - name: Install and Build 1
       run: |
-        echo hello prj1!
+        echo hello prj1! build-job~
+  deploy-job:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Install and Build 2
+      run: |
+        echo hello prj1! deploy-job~
