@@ -54,6 +54,10 @@ jobs:
   xxx-job:
     runs-on: ubuntu-latest
     steps:
+    - name: Checkout
+      uses: actions/checkout@v2
+      with:
+        persist-credentials: false
     - name: Deploy
       # Just need to pass the path from action
       uses: "./.github/template/code-scan" 
