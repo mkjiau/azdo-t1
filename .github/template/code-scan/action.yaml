@@ -1,0 +1,21 @@
+name: code-scan
+
+# Were we can define the inputs that our action will accept
+inputs:
+  aa: 
+    required: true
+  bb:
+    required: true
+
+runs:
+#   using: "composite"
+  # Defining the action steps(Just one step to be simple)
+  steps:
+  - name: code scan
+    run: |
+      echo code scanning 
+      echo "${{ github.event.inputs.aa }}"
+      echo "${{ github.event.inputs.bb }}"
+#     with:
+#       aaa: ${{ inputs.aa }}
+#       bbb: ${{ inputs.bb}}
