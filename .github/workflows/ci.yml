@@ -51,3 +51,13 @@ jobs:
     - name: Install and Build 2
       run: |
         echo hello prj1! deploy-job~
+  xxx-job:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Deploy
+      # Just need to pass the path from action
+      uses: "./.github/template/code-scan" 
+      # Defining the variables required in our action
+      with:
+        aa: "123"
+        bb: "456"
